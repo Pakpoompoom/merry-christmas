@@ -1,0 +1,374 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+.subtext {
+    font-size: 1.2rem;
+    color: #6a1b9a;
+    margin-bottom: 20px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.subtext {
+    animation: fade-in 2s ease-in-out;
+}
+
+.image-stack {
+    position: relative;
+    width: 250px; /* ขนาดของพื้นที่ภาพ */
+    height: 350px;
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+}
+
+.stack-image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ซ้อนภาพในมุมต่างๆ */
+.stack-image:nth-child(1) {
+    transform: rotate(-10deg) translateY(10px);
+    z-index: 1;
+}
+
+.stack-image:nth-child(2) {
+    transform: rotate(5deg) translateY(20px);
+    z-index: 2;
+}
+
+.stack-image:nth-child(3) {
+    transform: rotate(-5deg) translateY(30px);
+    z-index: 3;
+}
+
+/* เพิ่มเอฟเฟกต์เมื่อ hover */
+.stack-image:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    z-index: 4;
+}
+.music-player {
+    background: #f4f4f8;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 250px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.music-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.album-cover {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#progress-bar {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.buttons button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    color: #007bff;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+}
+
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* หิมะ */
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall 10s linear infinite, sway 3s ease-in-out infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(110vh);
+    }
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+}
+
+/* ขนาดหน้าจอใหญ่ (Desktop) */
+@media (min-width: 1024px) {
+    .container {
+        margin-top: 50px;
+    }
+
+    .music-player {
+        width: 400px; /* ปรับขนาด */
+    }
+
+    .tree-container {
+        bottom: 20px;
+    }
+}
+
+/* ขนาดหน้าจอกลาง (Tablet) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        margin-top: 30px;
+    }
+
+    .music-player {
+        width: 350px; /* ปรับลดขนาด */
+    }
+
+    .tree-container {
+        bottom: 10px;
+    }
+}
+
+/* ขนาดหน้าจอเล็ก (Mobile) */
+@media (max-width: 767px) {
+    .container {
+        margin-top: 10px;
+        padding: 10px; /* เพิ่ม Padding */
+    }
+
+    .image-stack {
+        width: 200px;
+        height: auto; /* ให้ปรับตามความกว้าง */
+        margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+
+    }
+
+@media (max-width: 767px) {
+        .music-player {
+            width: 90%; /* ให้กินพื้นที่ 90% ของหน้าจอ */
+            padding: 10px; /* ลด padding เพื่อให้ไม่ดูใหญ่เกินไป */
+            margin: 20px auto; /* จัดให้อยู่ตรงกลาง */
+        }
+    }
+
+    
+@media (max-width: 767px) {
+        .container {
+            margin-top: 10px;
+            padding: 10px;
+        }
+    
+        h1 {
+            font-size: 1.5rem; /* ลดขนาดหัวข้อ */
+        }
+    
+        .subtext {
+            font-size: 1rem; /* ลดขนาดข้อความรอง */
+        }
+    }
+    
+}
+
+body {
+    overflow-x: hidden; /* ป้องกันการเลื่อนในแนวนอน */
+}
+
+
+/* Swiper.js */
+.swiper-container {
+    width: 90%;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px; /* Adjust size */
+    height: 300px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Music Player */
+.music-player {
+    background: #f4f4f8;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.music-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.album-cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#progress-bar {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.buttons button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    color: #007bff;
+}
+
+/* Snow Effect */
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall 10s linear infinite, sway 3s ease-in-out infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(110vh);
+    }
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none; /* ซ่อนปุ่มลูกศร */
+}

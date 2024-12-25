@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas</title>
+    <!-- Swiper.js Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🎄 Merry Christmas 🎅</h1>
+        <p class="subtext">Wishing you a season of joy! ✨</p>
+
+        <!-- Swiper Container -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/1.jpg" alt="Image 1"></div>
+                <div class="swiper-slide"><img src="images/2.jpg" alt="Image 2"></div>
+                <div class="swiper-slide"><img src="images/3.jpg" alt="Image 3"></div>
+            </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Music Player -->
+        <div class="music-player">
+            <div class="music-info">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTguSPnYPWBuBtuGURPr-Fb1wx-UhI_fodSfg&s" alt="Album Cover" class="album-cover">
+                <div>
+                    <h3>SANTA DOESN'T KNOW YOU LIKE I DO</h3>
+                    <p>COVER | ALLY, JETAIME</p>
+                </div>
+            </div>
+            <audio id="audio" src="audio/song.mp3"></audio>
+            <div class="controls">
+                <span id="current-time">00:00</span>
+                <input type="range" id="progress-bar" value="0" max="100">
+                <span id="duration">03:49</span>
+            </div>
+            <div class="buttons">
+                <button id="play">Play</button>
+            </div>
+        </div>
+
+        <!-- Snow Effect -->
+        <div class="snow"></div>
+    </div>
+</body>
+</html>
